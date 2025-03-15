@@ -5,7 +5,15 @@ from pydantic import BaseModel
 
 from book_writing_flow.tools.custom_tool import BrightDataWebSearchTool
 
-llm = LLM(model="ollama/gemma3:4b")
+# Configure LLM
+llm = LLM(
+    model="gpt-4-turbo",
+    temperature=0.7,
+    max_tokens=4000
+)
+
+# Set the same LLM for function calling
+function_calling_llm = llm
 
 class Chapter(BaseModel):
     """Chapter of the book"""

@@ -17,7 +17,7 @@ class Chapter(BaseModel):
     content: str = ""
 
 class BookState(BaseModel):
-    topic: str = "Astronomy in 2025"
+    topic: str = "AI Agents: The Best tools and frameworks to use in 2025, a short book"
     total_chapters: int = 0
     titles: list[str] = []
     chapters: list[Chapter] = []
